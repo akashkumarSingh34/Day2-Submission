@@ -1,0 +1,17 @@
+Question
+Find the output of the following code snippet: 
+int i =0, j = 0;
+int *p = &i, *q = &j;
+q = p;
+*q = 2;
+cout<<i<<" "<<j;
+
+OUTPUT:
+	2 0
+  
+EXPLANATION:
+int i =0, j = 0;			      //initializing value 0 to ‘i’ and ‘j’
+int *p = &i, *q = &j;		    //’p’ points to address of ‘i’ and ‘q’ points to address of ‘j’
+q = p;				              //Now ‘q’ points to the address at which p points that is address of ‘i’
+*q = 2				              //here first we de-refer the address to which ‘q’ points and assign the value 2 at that location, so now i=2
+cout<<i<<" "<<j;		        //prints value stored in ‘i’ and ‘j’ i.e., 2 0
